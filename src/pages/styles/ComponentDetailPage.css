@@ -1,0 +1,141 @@
+/* фон страницы + отступ под фиксированный navbar */
+.detail-page-shell {
+  min-height:100vh;
+  max-width: 1100px;
+  margin: auto;
+  background:var(--bg);
+  padding-top:30px;
+  color:var(--text);
+  display:block;
+}
+
+.detail-page-shell--center {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin: auto;
+}
+
+/* блок с хлебными крошками над заголовком */
+.detail-breadcrumbs-wrapper {
+  margin-bottom:12px;
+  width: 85%;
+}
+
+.component-detail-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.component-detail-header {
+    width: 85%;
+    background: #212830;
+    border-radius: 8px;
+    border: 2px solid #404C5B;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+    min-height: 50px;
+}
+
+.component-detail-header img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    padding-right: 20px;
+}
+
+.component-detail-title {
+    color: #D1D7E1;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.15;
+}
+
+.component-detail-grid {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+}
+
+.component-detail-card {
+    background: #212830;
+    border-radius: 8px;
+    border: 2px solid #404C5B;
+    padding: 20px;
+    flex: 1 1 0%;
+    max-width: 600px;
+    min-width: 290px;
+    display: flex;
+    flex-direction: column;
+    min-height: 295px;
+    /* Для равной высоты блоков*/
+    box-sizing: border-box;
+}
+
+.component-detail-card .title {
+    color: #d1d7e1;
+    opacity: 0.68;
+    font-size: 1.25rem;
+    border: none;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #404C5B;
+    font-weight: 600;
+}
+
+.component-detail-list {
+    margin: 0 0 14px 0;
+    padding: 0;
+    list-style: none;
+    
+    
+}
+
+.component-detail-list li {
+    color: #d1d7e189;
+    font-size: 1rem;
+    padding-bottom: 3px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.component-detail-list li span {
+    color: #D1D7E1;
+    font-weight: normal;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+.component-detail-footnote {
+    margin-top: auto;
+    color: #d1d7e189;
+    font-size: 0.6em;
+    font-weight: 400;
+}
+
+.component-detail-card .description {
+    color: #D1D7E1;
+    font-size: 0.7em;
+    margin: 0;
+    font-weight: 200;
+    margin-left: 3px;
+}
+
+@media (max-width: 900px) {
+    .component-detail-header, .component-detail-grid {
+        flex-direction: column;
+        width: 97%;
+        padding: 18px 8px;
+        gap: 16px;
+    }
+}

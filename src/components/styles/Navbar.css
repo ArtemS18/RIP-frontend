@@ -1,0 +1,26 @@
+/* это из твоего SSR .header + .brand, слегка адаптировано */
+
+.app-header.navbar {
+    display: flex;
+    background-color: var(--bg);
+    z-index: 1000;
+    justify-content: space-between;
+    height: 70px;
+    padding: 10px;
+    align-items: center;
+    width: calc(100vw- 2px);
+    border-bottom: 2px solid var(--border);
+
+}
+
+.brand.navbar-brand  {
+  color:var(--text)!important;
+  font-size:25px;
+  text-decoration: none;
+  margin: 20px;
+
+}
+.brand.navbar-brand:hover  {
+  color:var(--text);
+  text-decoration:solid !important;
+}
