@@ -1,9 +1,9 @@
 {
-  "name": "Tile Notes",
-  "short_name": "Tile Notes",
+  "name": "FailiverCheck",
+  "short_name": "Failiver",
   "start_url": "/RIP-frontend",
   "display": "standalone",
-  "background_color": "#fdfdfd",
+  "background_color": "#0D1117",
   "theme_color": "#db4938",
   "orientation": "portrait-primary",
   "icons": [
