@@ -4,12 +4,17 @@ import { ComponentCard } from '../components/ComponentCard';
 import { getCart, getComponents } from '../api/textApi';
 import { type ICart, type Component } from '../types';
 import './styles/ComponentsListPage.css';
+import type { RootState } from '../store';
+import { useDispatch, useSelector } from 'react-redux';
+import { setServiceFilter } from '../store/filterSlice';
 
 export const ComonentsListPage = () => {
     const [components, setComponents] = useState<Component[]>([]);
     const [loading, setLoading] = useState(true);
-    const [searchTitle, setSearchTitle] = useState('');
     const [cart, setCart] = useState<ICart>({sys_calculation_id: null, components_count: 0});
+
+    const filter = useSelector((state: RootState) => state.filter.serviceFilter);
+    const dispatch = useDispatch();
 
     const fetchComponents = (filterTitle: string) => {
         setLoading(true);
@@ -43,7 +48,7 @@ export const ComonentsListPage = () => {
 
     const handleSearchSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        fetchComponents(searchTitle);
+        fetchComponents(filter);
     };
 
     return (
@@ -55,8 +60,8 @@ export const ComonentsListPage = () => {
                     <input
                         type="text"
                         placeholder="Поиск текстов"
-                        value={searchTitle}
-                        onChange={(e) => setSearchTitle(e.target.value)}
+                        value={filter}
+                        onChange={(e) =>  dispatch(setServiceFilter(e.target.value))}
                     />
                     <Button className="btn search" type="submit" >
                                 Найти

@@ -1,7 +1,7 @@
 import type { IPaginatedComponents, Component, ICart } from '../types';
 import { COMPONENTS_MOCK, BUCKET_MOCK } from './mock';
 
-const API_PREFIX = 'http://localhost:8080/api';
+const API_PREFIX = '/api';
 
 // Получение списка текстов с фильтраией по названию
 export const getComponents = async (title: string): Promise<IPaginatedComponents> => {

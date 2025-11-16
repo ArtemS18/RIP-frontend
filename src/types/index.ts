@@ -24,3 +24,6 @@ export interface ICart{
   sys_calculation_id: number | null;
   components_count: number;
 }
+export interface FilterState {
+  serviceFilter: string;
+}
