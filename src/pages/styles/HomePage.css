@@ -1,27 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+
 .home-shell {
-  background:var(--bg);
-  min-height:100vh;
-  padding-top:56px;
-  display:flex;
-  align-items:flex-start;
-  justify-content:center;
-  color:var(--text);
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url('https://i.pinimg.com/originals/34/77/43/34774375e6689c829dbf66dcf17fcc80.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.page-title{
+  font-size: 3rem !important;
+}
+
+.background-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(23,23,29,0.75) 70%, rgba(0,212,255,0.15) 100%);
+    z-index: 1;
 }
 
 .home-inner {
-  max-width:700px;
-  margin-top:40px;
-  padding:0 16px;
-  text-align:center;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
 }
 
-.home-title-fix {
-  margin-top:0;
+/* Анимации и акцент */
+.home-title-animated {
+    font-family: 'Poppins', 'Manrope', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    text-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 1px 4px rgba(0,212,255,0.3);
+    animation: fadeInDown 1.1s cubic-bezier(.37,1.65,.68,.93);
+    margin-bottom: 0.5rem;
 }
 
-.home-lead {
-  font-size:22px;
-  line-height:1.4;
-  color:#444;
-  margin:0 auto;
+.accent-word {
+    background: linear-gradient(100deg, #14ffe9 35%, #0578ff 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.home-lead-animated {
+    font-size: 1.2rem;
+    font-family: 'Manrope', 'Poppins', sans-serif;
+    font-weight: 600;
+    color: rgba(220, 220, 220, 0.85);
+    text-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    animation: fadeInUp 1.3s cubic-bezier(.37,1.15,.68,.95);
+}
+
+.accent-devops {
+    color: #14ffe9;
+    font-weight: 700;
+    font-style: italic;
+    background: rgba(23,23,29,0.30);
+    padding: 2px 12px;
+    border-radius: 20px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-80px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
