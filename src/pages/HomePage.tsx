@@ -1,8 +1,20 @@
 import './styles/HomePage.css';
 import { Link } from 'react-router-dom';
+import videoBg from '../assets/video-bg.mp4'; 
 
 export const HomePage = () => (
   <div className="home-shell">
+    <video 
+      className="background-video"
+      autoPlay 
+      loop 
+      muted 
+      playsInline
+      preload="auto"
+    >
+      <source src={videoBg} type="video/mp4" />
+      Ваш браузер не поддерживает видео.
+    </video>
     <div className="background-overlay"></div>
     <div className="home-inner">
       <Link to='/components'>
