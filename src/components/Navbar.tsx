@@ -12,6 +12,11 @@ export const AppNavbar = () => {
                 >
                     FailiverCheck
                 </Navbar.Brand>
+                {/* <Navbar.Text
+                as={Link}
+                >
+                    Компоненты
+                </Navbar.Text> */}
         </Navbar>
     );
 };
