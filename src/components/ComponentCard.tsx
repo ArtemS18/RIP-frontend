@@ -22,9 +22,9 @@ export const ComponentCard: React.FC<ComponentCardProps> = ({ component }) => {
                 <p>{component.title}</p>
 
                 <div className="component-card__actions">
-                    <Button className="btn add" type="button">
+                    {/* <Button className="btn add" type="button">
                                 Добавить+
-                            </Button>
+                            </Button> */}
                     <Link to={`/components/${component.id}`}>
                         <Button className="btn more" type="button">
                             Подробнее
