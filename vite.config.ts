@@ -43,6 +43,7 @@ export default defineConfig({
     cert: fs.readFileSync(path.resolve(__dirname, 'cert.crt')),
     },
     port: 3000,
+    host: "0.0.0.0",
     proxy: {
       // GET /api/users  -> http://localhost:8080/users
       '/api': {
@@ -50,6 +51,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/,''),
       },
+      '/failivercheck': {
+        target: 'http://localhost:9000/failivercheck',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/failivercheck/,''),
+      }
     }
   }
   
