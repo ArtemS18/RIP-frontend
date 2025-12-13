@@ -91,7 +91,7 @@ export const ComonentsListPage = () => {
             {/* плавающая корзина */}
             <div className="systemCalc" title="Текущая заявка">
                 <Image
-                    src="https://localhost:3000/failivercheck/svg/bar-chat.svg"
+                    src="http://localhost:9000/failivercheck/svg/bar-chat.svg"
                     className="systemCalc__icon"
                     width={70}
                     height={70}
