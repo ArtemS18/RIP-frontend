@@ -7,6 +7,7 @@ import './styles/ComponentsListPage.css';
 import type { RootState } from '../store';
 import { useDispatch, useSelector } from 'react-redux';
 import { setServiceFilter } from '../store/filterSlice';
+import { CustomBreadcrumbs } from '../components/Breadcrumbs';
 
 export const ComonentsListPage = () => {
     const [components, setComponents] = useState<Component[]>([]);
@@ -51,9 +52,16 @@ export const ComonentsListPage = () => {
         fetchComponents(filter);
     };
 
+    const breadcrumbs = [
+        { label: 'Компоненты', active: true }
+    ];
+
     return (
         <div className="texts-page-shell">
             <Container className="texts-container">
+                <div className="breadcrumbs-wrapper">
+                    <CustomBreadcrumbs crumbs={breadcrumbs} />
+                </div>
                 <h1 className='page-title'>Компоненты системы</h1>
 
                 <Form className="search" onSubmit={handleSearchSubmit}>
