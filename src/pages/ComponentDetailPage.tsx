@@ -53,11 +53,11 @@ export const ComponentDetailPage = () => {
 
     return (
         <div className="detail-page-shell">
-            
-            <div className="component-detail-main">
-                <div className="detail-breadcrumbs-wrapper">
+            <div className="detail-breadcrumbs-wrapper">
                     <CustomBreadcrumbs crumbs={breadcrumbs} />
                 </div>
+            <div className="component-detail-main">
+                
                 <div className="component-detail-header">
                     <img src={displayImage} alt={component.title} />
                         <span className="component-detail-title">
