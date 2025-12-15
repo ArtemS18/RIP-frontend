@@ -79,3 +79,12 @@ display: inline;
     grid-template-columns:1fr;
   }
 }
+
+.breadcrumbs-wrapper {
+  margin-top:30px  !important;
+}
+
+.page-title{
+  margin-top: 0px !important ;
+}
+

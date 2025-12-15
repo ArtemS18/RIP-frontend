@@ -31,8 +31,8 @@ function App() {
     return (
         <HashRouter>
             <Routes>
-                <Route path="/" element={<HomePage />} />
                 <Route element={<MainLayout />}>
+                    <Route path="/" element={<HomePage />} />
                     <Route path="/components" element={<ComonentsListPage />} />
                     <Route path="/components/:id" element={<ComponentDetailPage />} />
                 </Route>
