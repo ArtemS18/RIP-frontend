@@ -36,7 +36,7 @@ export default defineConfig({
       }
     })
   ],
-  base: "/RIP-frontend",
+  base: "/failiverCheck-frontend",
   server: {
     https:{
     key: fs.readFileSync(path.resolve(__dirname, 'cert.key')),
