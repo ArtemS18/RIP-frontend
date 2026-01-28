@@ -1,0 +1,46 @@
+.app-header.navbar {
+  display: flex;
+  background-color: var(--bg);
+  z-index: 1000;
+  justify-content: space-between;
+  height: 70px;
+  padding: 10px;
+  align-items: center;
+  width: calc(100vw - 2px);
+  border-bottom: 2px solid var(--border);
+}
+
+/* Цвет FailiverCheck */
+.brand.navbar-brand {
+  color: var(--text) !important; /* задаёшь --accent под FailiverCheck */
+  font-size: 25px;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.brand.navbar-brand:hover {
+  color: var(--text);
+}
+
+/* Общие стили ссылок меню */
+.navbar-items .nav-link-custom {
+  font-size: 1.1rem;           /* поменьше шрифт */
+  color: var(--text) !important; /* как FailiverCheck */
+  padding: 0px;
+  text-decoration: none;
+}
+.navbar-items  {
+  margin-right: 20px;
+}
+
+/* Активная страница */
+.navbar-items .nav-link-custom.active {
+  font-weight: 700;
+  border-bottom: 2px solid var(--text);
+}
+
+/* При ховере */
+.navbar-items .nav-link-custom:hover {
+  color: var(--accent);
+  opacity: 0.8;
+}
